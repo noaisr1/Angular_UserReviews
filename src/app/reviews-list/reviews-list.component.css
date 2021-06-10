@@ -1,0 +1,22 @@
+
+.deleteButton{
+    background-image: image-set("../assets/delete_icon.png");
+}
+h5{
+    display: inline-block;
+}
+h3{
+    margin-right: 50%; 
+    margin-left: 20%;
+}
+ul{
+    margin-right: 30%; 
+    margin-left: 30%;
+}
+li{
+    list-style-type: none;
+}
+#emptyList{
+    margin-right: 30%; 
+    margin-left: 30%;
+}

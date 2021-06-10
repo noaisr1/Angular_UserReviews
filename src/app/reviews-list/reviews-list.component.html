@@ -1,0 +1,34 @@
+<!-- Style for delete button image icon-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <!-- I used *ngIf and not [hidden] to free up space of the program doesn't use
+      I would use hidden when building the objects is costly -->
+      <div *ngIf="reviews.length>0;then reviewsList else noReviews"></div>
+
+
+      <ng-template #reviewsList>
+        <ul class="list-group">
+          <li class="list-group-item">
+              <h5>
+                {{review.title}}
+              </h5>
+              <button (click)="onDelete(review)" class="deleteButton btn-default btn-sm pull-right fa fa-trash">
+              </button>
+              <p *ngIf="review.description">
+                {{review.description}}
+              </p>   
+          </li>
+        </ul>
+      </ng-template>
+
+      <ng-template #noReviews>
+        <p id="emptyList">
+          No reviews to show
+        </p>
+      </ng-template>
+    </div>
+  </div>
+</div>
